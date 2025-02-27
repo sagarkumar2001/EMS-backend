@@ -19,7 +19,7 @@ export const sendEmail=async (req,res)=>{
     const token=jwt.sign({email:mail.email,id:mail._id},secret,{
         expiresIn:"5m"
     })
-    const link=`http://localhost:3000/api/reset/${mail._id}/${token}`;
+    const link=`https://ems-backend-dun.vercel.app/api/reset/${mail._id}/${token}`;
 
 
     var transporter = nodemailer.createTransport({
@@ -82,7 +82,7 @@ export const  verifyEmail=async(req,res)=>{
     if(!verify){
         return res.status(404).json({success:false,error:"Try Again..."});
     }
-    res.redirect(`http://localhost:5173/reset/verify/${id}/${token}`)
+    res.redirect(`https://ems-frontend-rho-blush.vercel.app/reset/verify/${id}/${token}`)
     return;
     
    } catch (error) {
