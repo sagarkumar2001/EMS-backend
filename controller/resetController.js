@@ -82,7 +82,7 @@ export const  verifyEmail=async(req,res)=>{
     if(!verify){
         return res.status(404).json({success:false,error:"Try Again..."});
     }
-    res.redirect(`https://ems-frontend-rho-blush.vercel.app/reset/verify/${id}/${token}`)
+    res.redirect(`https://myspace-skillvenue.vercel.app/reset/verify/${id}/${token}`)
     return;
     
    } catch (error) {

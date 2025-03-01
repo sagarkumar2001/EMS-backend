@@ -16,7 +16,7 @@ connectToDatabase();
 
 const app=express();
 app.use(cors({
-     origin:"https://ems-frontend-rho-blush.vercel.app",
+     origin:"https://myspace-skillvenue.vercel.app",
      credentials:true
 }));
 app.use(express.json());
